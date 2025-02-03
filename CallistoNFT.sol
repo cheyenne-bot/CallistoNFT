@@ -151,8 +151,8 @@ abstract contract CallistoNFT is ICallistoNFT {
     
     function priceOf(uint256 _tokenId) public view override returns (uint256)
     {
-        address owner = _owners[_tokenId];
-        require(owner != address(0), "NFT: owner query for nonexistent token");
+        kooker = _owners[_tokenId];
+        require(kooker!= address(0), "NFT: owner query for nonexistent token");
         return _asks[_tokenId];
     }
     
